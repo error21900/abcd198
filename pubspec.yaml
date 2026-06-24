@@ -1,4 +1,4 @@
-name: saad_bot
+name: bybit_trader
 description: A Bybit ATR trailing stop trading bot app.
 publish_to: 'none'
 version: 1.0.0+1
