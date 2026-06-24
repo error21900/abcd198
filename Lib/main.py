@@ -32,10 +32,9 @@ class SaadBotApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         brightness: Brightness.dark,
-        colorScheme: const ColorScheme.dark(
-          primary: Color(0xFF00C087),
-          secondary: Color(0xFF00C087),
-          surface: Color(0xFF141B2D),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+          brightness: Brightness.dark,
         ),
         scaffoldBackgroundColor: const Color(0xFF0A0E1A),
         appBarTheme: const AppBarTheme(
@@ -141,11 +140,11 @@ class _LoginScreenState extends State<LoginScreen> {
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: BorderSide(color: Colors.grey[800]!, width: 1),
+        borderSide: BorderSide(color: Colors.grey[800]!.withOpacity(0.5), width: 1),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: BorderSide(color: Colors.grey[800]!, width: 1),
+        borderSide: BorderSide(color: Colors.grey[800]!.withOpacity(0.5), width: 1),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
