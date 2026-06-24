@@ -66,6 +66,6 @@ workflows:
       - name: Compile Application
         script: |
           flutter pub get
-          flutter build apk --release
+          flutter build apk --release --enable-experiment=dot-shorthands
     artifacts:
       - build/app/outputs/**/*.apk
