@@ -35,7 +35,6 @@ class SaadBotApp extends StatelessWidget {
         colorScheme: const ColorScheme.dark(
           primary: Color(0xFF00C087),
           secondary: Color(0xFF00C087),
-          background: Color(0xFF0A0E1A),
           surface: Color(0xFF141B2D),
         ),
         scaffoldBackgroundColor: const Color(0xFF0A0E1A),
@@ -64,9 +63,6 @@ class SaadBotApp extends StatelessWidget {
   }
 }
 
-// ================================================================
-// LOGIN SCREEN
-// ================================================================
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -168,10 +164,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-
               const SizedBox(height: 30),
-
-              // ── Logo & Title ──
               Center(
                 child: Column(
                   children: [
@@ -218,10 +211,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
               ),
-
               const SizedBox(height: 48),
-
-              // ── API Key ──
               Text('Bybit Demo API Key',
                   style: TextStyle(
                       fontSize: 13,
@@ -233,10 +223,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: const TextStyle(color: Colors.white, fontSize: 14),
                 decoration: _inputDecoration('Paste your API key here'),
               ),
-
               const SizedBox(height: 18),
-
-              // ── API Secret ──
               Text('Bybit Demo API Secret',
                   style: TextStyle(
                       fontSize: 13,
@@ -260,21 +247,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-
               const SizedBox(height: 8),
-              GestureDetector(
-                onTap: () {},
-                child: Text(
-                  'Get Demo keys: bybit.com → Account → API Management',
-                  style: TextStyle(
-                      fontSize: 11,
-                      color: const Color(0xFF00C087).withOpacity(0.8)),
-                ),
+              Text(
+                'Get Demo keys: bybit.com → Account → API Management',
+                style: TextStyle(
+                    fontSize: 11,
+                    color: const Color(0xFF00C087).withOpacity(0.8)),
               ),
-
               const SizedBox(height: 32),
-
-              // ── Status ──
               if (_statusMsg.isNotEmpty)
                 Container(
                   margin: const EdgeInsets.only(bottom: 16),
@@ -288,8 +268,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: const TextStyle(color: Colors.white70, fontSize: 12),
                       textAlign: TextAlign.center),
                 ),
-
-              // ── Connect Button ──
               SizedBox(
                 height: 54,
                 child: ElevatedButton(
@@ -335,10 +313,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                 ),
               ),
-
               const SizedBox(height: 28),
-
-              // ── Safety box ──
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
@@ -387,7 +362,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
               ),
-
               const SizedBox(height: 24),
             ],
           ),
