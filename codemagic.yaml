@@ -27,7 +27,7 @@ workflows:
           </network-security-config>
           EOF
 
-          # 3. Inject AndroidManifest file to grant full internet permissions and set name to "Saad Trading Bot"
+          # 3. Inject AndroidManifest file (FIXED: Removed missing roundIcon requirement)
           cat << 'EOF' > android/app/src/main/AndroidManifest.xml
           <?xml version="1.0" encoding="utf-8"?>
           <manifest xmlns:android="http://schemas.android.com/apk/res/android">
@@ -38,7 +38,6 @@ workflows:
                   android:label="Saad Trading Bot"
                   android:name="${applicationName}"
                   android:icon="@mipmap/ic_launcher"
-                  android:roundIcon="@mipmap/ic_launcher_round"
                   android:usesCleartextTraffic="true"
                   android:networkSecurityConfig="@xml/network_security_config">
                   <activity
